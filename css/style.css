@@ -1,0 +1,317 @@
+/*
+main red: #e74c3c
+lighter red: #e36659
+green: #04cb86
+grey: #e2e2e2
+
+
+
+
+
+*/
+.nav-pills{
+background: #e2e2e2;
+border-style: solid;
+border-width:.2em;
+border-right-style: none;
+border-left-style: none;
+border-top-style: none;
+border-bottom-color: #b0b8b9;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+background-color:#e74c3c;
+
+}
+body{
+background: #e2e2e2;
+
+}
+.myNav{
+background: #e2e2e2;
+
+}
+/*Green div with secondary links*/
+.spaceUnderJumbo{
+background-color: #04cb86;
+text-decoration:none;
+height:16em;
+margin-top:2.5em;
+
+}
+.spaceUnderJumbo a:hover{
+text-decoration:none;
+}
+.jumbotron{
+background: #27353d;
+color:#ecf0f1;
+}
+.link-btn { 
+color: white; 
+background-color: red; 
+border-color: #E7E8E3; 
+}
+.btn-info {
+    background-color: #e74c3c;
+    font-family:Open Sans;
+    color: #ecf0f1;
+
+
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #e36659;
+  border-color: #333;
+}
+/* arrow on jumbotron*/
+.glyphicon-chevron-left,
+.glyphicon-chevron-right{
+color:white;
+
+}
+/* Box around the arrow on jumbotron*/
+.arrowBox{
+color:red;
+background-color:#e36659;
+width: 30px;
+height: 34px;
+margin-top: -15px;
+font-size: 30px;
+position: absolute;
+top: 50%;
+z-index: 5;
+display: inline-block;
+border:1px;
+border-radius:5;
+}
+.arrowBox:hover,
+.arrowBox:focus{
+background-color:#e74c3c;
+
+}
+ .mainColour{
+  background-color:#27353d;
+  margin-top:0px;
+  height:70em;
+  background-image: url(../img/Event-Management.jpg);
+}
+.carouselCaptionMove,
+.carouselCaptionMove2,
+.carouselCaptionMove3{
+top: 8%;
+
+}
+.carouselCaptionMove2{
+margin-left: 400px;
+}
+.carouselCaptionMove3{
+margin-right: 400px;
+}
+.bandName{
+color: #04cb86;
+font-size: 3em;
+
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus ,
+.navbar-inverse .navbar-nav > .active > a
+{
+  background-color: #e8645a;
+}
+.vouch{
+background-color: #f3f3f3;
+height:auto;
+padding-bottom:5em;
+}
+.staff,
+.staff2,
+.customer{
+background-color: #ffffff;
+height:auto;
+}
+.socialMedia{
+width:1.6em;
+height:1.6em;
+}
+/*Customers comment*/
+.comment{
+margin-top:2em;
+border-style: solid;
+border-width:.2em;
+border-right-style: none;
+border-left-style: none;
+border-bottom-style: none;
+border-top-color: #e8645a;
+
+}
+.bioXS{
+font-size:.9em;
+}
+.nameXS{
+font-size:1.5em;
+}
+.secondaryButtons{
+margin-top:66px;
+}
+.customerJob{
+font-style: italic;
+font-size:1.2em;
+}
+.staffHeader{
+color:#777777;
+}
+/*GRAY button on customers*/
+.previousButton{
+background-color:#98a3a3;
+}
+footer{
+height:auto;
+background-color: #04cb86;
+}
+.continueReading{
+color:#e8645a;
+
+}
+.footerTitle{
+color:#fff;
+}
+/* Dropdown for contact info on footer */
+ ul li:hover ul{
+display: block; /* display the dropdown */
+}
+.dropdown{
+list-style-type: none;
+}
+.bookNowButton,
+.bookNowButton1{
+background-color: rgb(0,0,0,0);
+border-style: solid;
+border-width:.2em;
+border-color: #e74c3c;
+color: #fff;
+width:12em;
+}
+.bookNowButton1{
+margin-bottom:5.6em;
+}
+.bookNowButton:hover,
+.bookNowButton:hover,
+.bookNowButton1:hover,
+.bookNowButton1:focus{
+background-color: #e74c3c;
+color:#fff;
+font-weight:bold;
+}
+.test{
+background-color: pink;
+}
+.footerLinks a
+{
+display: block;
+color: #fff;
+font-size:1.2em;
+padding:.3em;
+text-decoration:none;
+}
+
+.footerLinks a:hover {
+color: #e74c3c;
+}
+.xsInvisiblePush{
+height:3em;
+color: #fff;
+}
+
+
+.dropdown a{
+  text-decoration: none;  
+ 
+}
+
+
+
+
+
+
+
+
+
+.profile ul,
+.profile ul a{
+        padding: 0;
+        list-style: none;
+    }
+ .profile   ul li a{
+        float: left;
+        width: 100px;
+        text-align: center;
+        line-height: 21px;
+    }
+.profile    ul li a{
+        display: block;
+        padding: 5px 10px;
+        color: #333;
+        background: #f2f2f2;
+        text-decoration: none;
+    }
+ .profile   ul li a:hover{
+        color: #fff;
+        background: #939393;
+    }
+ .profile   ul li ul a{
+        display: none;
+    }
+ .profile   a ul li:hover ul :hover a{
+        display: block; /* display the dropdown */
+    }
+    .profile{
+        float: right;
+    }
+    
+    
+    
+    
+.signIn,
+.signUp{
+  background-color: red;
+  
+    }
+    /*Creating space between inputs and buttons */
+button, html input[type="button"], input[type="reset"], input[type="submit"],
+.password{
+        margin-top: 1em;
+    }
+    
+    .signIn_SignUp_Header{
+        
+        color:#f3f3f3;
+    }
+    
+    .modal-body{
+        max-height: 800px;
+    }
+    
+    .loginBackground{
+        background-color: rgba(254, 254, 254, 0.2);
+        border-radius: 4px;
+        margin-top:8em;
+    }
+    
+    .nav-tabs>li>a {
+        color: #fff;
+    }
+    
+    #homeTable, th, td{
+        border: 1px solid black;
+        padding:3px;
+        
+        
+    }
+    #usernameError,
+    #passwordError{
+        color:#fff;
+    }
