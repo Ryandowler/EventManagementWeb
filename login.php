@@ -43,9 +43,6 @@ $statement = $gateway->getEvents();
 
     </head>
     <body>
-        
-        
-        
         <div class = "navbar navbar-inverse navbar-static-top myNav">
         <div class = "container">
             <a href = "Event_Management.php" class = "navbar-brand">
@@ -69,9 +66,6 @@ $statement = $gateway->getEvents();
             </div>
         </div>
     </div>
-        
-        
-      
         <?php
         if (isset($message)) {
             echo '<p>' . $message . '</p>';
@@ -100,7 +94,7 @@ $statement = $gateway->getEvents();
                         <div class="loginBackground col-lg-5">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
-                                <li><a href="#create" data-toggle="tab" class="testr">Create Account</a></li>
+                                <li><a href="#create" data-toggle="tab" class="createAccount">Create Account</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane active in" id="login">

@@ -61,73 +61,107 @@
                 echo '<p>' . $message . '</p>';
             }
             ?>
-            <form ID="HomeForm" method="POST" action="deleteSelectedEvents.php">
-                <table id ="homeTable" >
-                    <?php
-                    $username = $_SESSION['username'];
-                    echo '<h4> Welcome, ' . $username . '</h4>';
-                    ?>
-                    <thead>
-                        <tr id="bleh">
-                            <th><input type="checkbox" onclick="checkAll(this)"><br></th>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th class="thPush">Start Date</th>
-                            <th class="thPush">End Date </th>
-                            <th>Time</th>
-                            <th>Max Attendees</th>
-                            <th>Cost</th>
-                            <th>Manager ID</th>
-                            <th>Options</th>
-                        </tr>
+            <div class="col-lg-12">
+                <div class="otherTablesBox col-lg-2">
+                    <h1>Other Tables</h1>
+                    <div class="col-lg-1">
+                        <table class="displayingOtherTables table-responsive table-condensed table-striped table-hover">
 
-                    </thead>
-                    <tbody> 
-                    <script language="javascript">
-                        function checkAll(master) {
-                            var checked = master.checked;
-                            var col = document.getElementsByTagName("INPUT");
-                            for (var i = 0; i < col.length; i++) {
-                                col[i].checked = checked;
+                            <tr>
+                            <td><img src="img/notepad.png" /></td>
+                                <td><a href = "#.php">Events</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/manager.png" /></td>
+                                <td><a href = "#.php">Managers</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/organiser.png" /></td>
+                                <td><a href = "#.php">Organisers</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/asset.png" /></td>
+                                <td><a href = "#.php">Assets</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/location.png" /></td>
+                                <td><a href = "#.php">Location</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/attendee.png" /></td>
+                                <td><a href = "#.php">Attendee</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <form ID="HomeForm" class="col-lg-7 col-lg-push-2" method="POST" action="deleteSelectedEvents.php">
+                    <table class ="homeTable table-responsive table-condensed table-striped table-hover  " >
+                        <?php
+                        $username = $_SESSION['username'];
+                        echo '<h4> Welcome, ' . $username . '</h4>';
+                        ?>
+                        <thead>
+                            <tr id="bleh">
+                                <th><input type="checkbox" onclick="checkAll(this)"><br></th>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th class="thPush">Start Date</th>
+                                <th class="thPush">End Date </th>
+                                <th>Time</th>
+                                <th>Max Attendees</th>
+                                <th>Cost</th>
+                                <th>Manager ID</th>
+                                <th>Options</th>
+                            </tr>
+
+                        </thead>
+                        <tbody> 
+                        <script language="javascript">
+                            function checkAll(master) {
+                                var checked = master.checked;
+                                var col = document.getElementsByTagName("INPUT");
+                                for (var i = 0; i < col.length; i++) {
+                                    col[i].checked = checked;
+                                }
                             }
-                        }
-                    </script>
-                    <?php
-                    $row = $statement->fetch(PDO::FETCH_ASSOC);
-                    while ($row) {
-
-                        echo '<td><input type="checkbox" value="' . $row['eventID'] . '" name="events[]" /></td>';
-                        echo '<td>' . $row['eventID'] . '</td>';
-                        echo '<td>' . $row['title'] . '</td>';
-                        echo '<td>' . $row['description'] . '</td>';
-                        echo '<td >' . $row['startDate'] . '</td>';
-                        echo '<td>' . $row['endDate'] . '</td>';
-                        echo '<td>' . $row['time'] . '</td>';
-                        echo '<td>' . $row['maxAttendees'] . '</td>';
-                        echo '<td>' . $row['cost'] . '</td>';
-                        echo '<td>' . $row['managerID'] . '</td>';
-                        
-                        echo '<td class=" noHover ">'
-                        //<a href="somepage.html"><button type="button">Text of Some Page</button></a>
-                        . '<a href="viewEvent.php?id=' . $row['eventID'] . '"><button type="button" class="grid_2"  >View</button></a> '
-                        . '<a href="editEventForm.php?id=' . $row['eventID'] . '"><button type="button" class="grid_2">Edit</button></a> '
-                        . '<a class="deleteEvent" <a href="deleteEvent.php?id=' . $row['eventID'] . '"><button type="button" class="grid_2">Delete</button></a> '
-                       . '<p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p>'      
-                        . '</td>';
-                        echo '</tr>';
+                        </script>
+                        <?php
                         $row = $statement->fetch(PDO::FETCH_ASSOC);
-                    }
-                    ?>
+                        while ($row) {
 
-                    </tbody>
-                </table>  
-                <input type="submit" name="deleteSelected" value="Delete Selected" />
+                            echo '<td><input type="checkbox" value="' . $row['eventID'] . '" name="events[]" /></td>';
+                            echo '<td>' . $row['eventID'] . '</td>';
+                            echo '<td>' . $row['title'] . '</td>';
+                            echo '<td>' . $row['description'] . '</td>';
+                            echo '<td >' . $row['startDate'] . '</td>';
+                            echo '<td>' . $row['endDate'] . '</td>';
+                            echo '<td>' . $row['time'] . '</td>';
+                            echo '<td>' . $row['maxAttendees'] . '</td>';
+                            echo '<td>' . $row['cost'] . '</td>';
+                            echo '<td>' . $row['managerID'] . '</td>';
 
-            </form>
+                            echo '<td class=" noHover ">'
+                            //<a href="somepage.html"><button type="button">Text of Some Page</button></a>
+                            . '<a href="viewEvent.php?id=' . $row['eventID'] . '"><button type="button" class="grid_2"  >View</button></a> '
+                            . '<a href="editEventForm.php?id=' . $row['eventID'] . '"><button type="button" class="grid_2">Edit</button></a> '
+                            . '<a class="deleteEvent" <a href="deleteEvent.php?id=' . $row['eventID'] . '"><button type="button" class="grid_2">Delete</button></a> '
+                            . '<p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p>'
+                            . '</td>';
+                            echo '</tr>';
+                            $row = $statement->fetch(PDO::FETCH_ASSOC);
+                        }
+                        ?>
+
+                        </tbody>
+                    </table>  
+                    <input type="submit" name="deleteSelected" value="Delete Selected" />
+
+                </form>
+            </div>
         </div> 
-        
-        
+
+
 
     </body>
 </html>

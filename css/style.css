@@ -3,6 +3,7 @@ main red: #e74c3c
 lighter red: #e36659
 green: #04cb86
 grey: #e2e2e2
+navy: #27353d
 
 
 
@@ -305,13 +306,35 @@ button, html input[type="button"], input[type="reset"], input[type="submit"],
         color: #fff;
     }
     
-    #homeTable, th, td{
+    /* Styling the events table only*/
+    .homeTable td, th{
         border: 1px solid black;
-        padding:3px;
-        
-        
+        padding:3px; 
     }
     #usernameError,
     #passwordError{
         color:#fff;
+    }
+
+    .displayingOtherTables{
+        
+        border-radius: 4em;
+        width:100%;
+        
+    }
+    .displayingOtherTables a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+    
+    .otherTablesBox{
+    
+         
+         background-color: rgba(231, 76, 60, 0.7);
+        border: 1px solid #e74c3c;
+    }
+    
+    .createAccount{
+        color:black;
     }

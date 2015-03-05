@@ -7,7 +7,7 @@ class User {
     private $fullname;
     private $age;
     private $emailaddress;
-     private $maidenName;
+    private $maidenName;
     
     //creating the constructor, needed as my above variables are private, so this is how i access them
     public function __construct($u, $p, $fn, $a, $ea, $mn) {
