@@ -113,3 +113,9 @@ function validateEventForm(event) {
     }
 
 };
+
+
+$('#openBtn').click(function(){
+	$('#myModal').modal({show:true})
+});
+

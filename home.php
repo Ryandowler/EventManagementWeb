@@ -61,14 +61,14 @@
                 echo '<p>' . $message . '</p>';
             }
             ?>
-            <div class="col-lg-12">
-                <div class="otherTablesBox col-lg-2">
+            <div class="col-lg-4">
+                <div class="otherTablesBox col-lg-7">
                     <h1>Other Tables</h1>
-                    <div class="col-lg-1">
+                    <div class="col-lg-2">
                         <table class="displayingOtherTables table-responsive table-condensed table-striped table-hover">
 
                             <tr>
-                            <td><img src="img/notepad.png" /></td>
+                                <td><img src="img/notepad.png" /></td>
                                 <td><a href = "#.php">Events</a></td>
                             </tr>
                             <tr>
@@ -94,12 +94,15 @@
                         </table>
                     </div>
                 </div>
-                <form ID="HomeForm" class="col-lg-7 col-lg-push-2" method="POST" action="deleteSelectedEvents.php">
+            </div>
+            <div class="col-lg-8">
+                <form ID="HomeForm" class="col-lg-12" method="POST" action="deleteSelectedEvents.php">
                     <table class ="homeTable table-responsive table-condensed table-striped table-hover  " >
-                        <?php
+                        <!--<?php
                         $username = $_SESSION['username'];
                         echo '<h4> Welcome, ' . $username . '</h4>';
                         ?>
+                        -->
                         <thead>
                             <tr id="bleh">
                                 <th><input type="checkbox" onclick="checkAll(this)"><br></th>
@@ -159,6 +162,7 @@
 
                 </form>
             </div>
+
         </div> 
 
 

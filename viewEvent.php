@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/deleteEvent.js"></script>
         <script type="text/javascript" src="js/event.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+ 
      
 
         <!--importing jquery for navbar-->
@@ -86,10 +86,11 @@
             </table>
 
             <p>
-                <a href="editEventForm.php?id=<?php echo $row['eventID']; ?>">
+                <a href="editEventForm.php?id=<?php echo $row['eventID']; ?>" class="btn btn-md editEventBTN">
                     Edit Event</a>
-                <a class="deleteEvent" href="deleteEvent.php?id=<?php echo $row['eventID']; ?>">Delete Event</a>
+                <a class="btn btn-md btn-info" href="deleteEvent.php?id=<?php echo $row['eventID']; ?> " >Delete Event</a>
             </p>
         </div>
+        
     </body>
 </html>

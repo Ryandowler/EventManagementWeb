@@ -2,6 +2,7 @@
 main red: #e74c3c
 lighter red: #e36659
 green: #04cb86
+green hover: #42cf9e
 grey: #e2e2e2
 navy: #27353d
 
@@ -31,12 +32,12 @@ background: #e2e2e2;
 background: #e2e2e2;
 
 }
-/*Green div with secondary links*/
+/*Green div with dary links*/
 .spaceUnderJumbo{
 background-color: #04cb86;
 text-decoration:none;
 height:16em;
-margin-top:2.5em;
+
 
 }
 .spaceUnderJumbo a:hover{
@@ -65,7 +66,7 @@ border-color: #E7E8E3;
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
   background-color: #e36659;
-  border-color: #333;
+  //border-color: #333;
 }
 /* arrow on jumbotron*/
 .glyphicon-chevron-left,
@@ -86,7 +87,7 @@ top: 50%;
 z-index: 5;
 display: inline-block;
 border:1px;
-border-radius:5;
+border-radius: 6px;
 }
 .arrowBox:hover,
 .arrowBox:focus{
@@ -96,17 +97,20 @@ background-color:#e74c3c;
  .mainColour{
   background-color:#27353d;
   margin-top:0px;
-  height:70em;
-  background-image: url(../img/Event-Management.jpg);
+  min-height:40em;
+  background-image: url(../img/Event-Management1.jpg);
+  
 }
 .carouselCaptionMove,
-.carouselCaptionMove2,
 .carouselCaptionMove3{
 top: 8%;
-
+}
+.carouselCaptionMove2
+{
+    bottom: 49%;
 }
 .carouselCaptionMove2{
-margin-left: 400px;
+margin-left: 45em;
 }
 .carouselCaptionMove3{
 margin-right: 400px;
@@ -119,6 +123,7 @@ font-size: 3em;
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus ,
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a
 {
   background-color: #e8645a;
@@ -138,15 +143,19 @@ height:auto;
 width:1.6em;
 height:1.6em;
 }
+.staffImage,
+.customerImage{
+    margin-top: 1em;
+}
 /*Customers comment*/
 .comment{
 margin-top:2em;
-border-style: solid;
-border-width:.2em;
+//border-style: solid;
+//border-width:.2em;
 border-right-style: none;
 border-left-style: none;
 border-bottom-style: none;
-border-top-color: #e8645a;
+//border-top-color: #e8645a;
 
 }
 .bioXS{
@@ -156,7 +165,7 @@ font-size:.9em;
 font-size:1.5em;
 }
 .secondaryButtons{
-margin-top:66px;
+margin-top:6em;
 }
 .customerJob{
 font-style: italic;
@@ -167,7 +176,7 @@ color:#777777;
 }
 /*GRAY button on customers*/
 .previousButton{
-background-color:#98a3a3;
+background-color:#04cb86;
 }
 footer{
 height:auto;
@@ -189,10 +198,11 @@ list-style-type: none;
 }
 .bookNowButton,
 .bookNowButton1{
-background-color: rgb(0,0,0,0);
-border-style: solid;
-border-width:.2em;
-border-color: #e74c3c;
+//background-color: rgb(0,0,0,0);
+background-color: #e74c3c;
+//border-style: solid;
+//border-width:.2em;
+//border-color: #e74c3c;
 color: #fff;
 width:12em;
 }
@@ -203,9 +213,10 @@ margin-bottom:5.6em;
 .bookNowButton:hover,
 .bookNowButton1:hover,
 .bookNowButton1:focus{
-background-color: #e74c3c;
+//background-color: #e74c3c;
+background-color: #e36659;
 color:#fff;
-font-weight:bold;
+//font-weight:bold;
 }
 .test{
 background-color: pink;
@@ -338,3 +349,317 @@ button, html input[type="button"], input[type="reset"], input[type="submit"],
     .createAccount{
         color:black;
     }
+    #horizontalLine,
+    #horizontalLineMD,
+    #horizontalLineSM{
+        background-color: #e74c3c;
+        height: .2em;
+        margin-top:1em;
+    }
+    #horizontalLineMD{
+        width:58%;
+        float:right;
+    }
+    #horizontalLineSM{
+        width:58%;
+        float:right;
+    }
+    
+    .contiueReadingBTN{
+        background-color: #e74c3c;
+        color:#fff;
+        margin-top:.6em;
+        font-size: .8em;
+    }
+    .customerCysleBTN{
+        margin-top:.6em;
+    }
+    // Create Event -----------------------
+    .createEventForm{
+        background-color: #27353d;
+    }
+    
+    #createEventFormBG{
+        background-image: url(../img/createEventBG.jpg);
+    }
+      button, html input[type="button"], input[type="reset"], input[type="submit"], .password{
+        color: #000;
+    }
+    .createEventBTNs{
+        background-color: #e74c3c;
+    }
+    .createEventBTNs:hover{
+        background-color: #e36659;
+        color:#fff;
+    }
+    
+    .inputFieldPush{
+        margin-top: .7em;
+    }
+    
+
+    
+    .editEventBTN{
+        background-color: #04cb86;
+        color: #fff;
+    }
+     .editEventBTN:hover{
+        background-color:    #42cf9e;
+        color: #fff;
+    }
+    
+    
+    .greenFont a{
+     color:#04cb86;  
+    }
+    
+    
+    /*-----------------------------------------profile-----------------------------------------------*/
+
+/* -- color classes -- */
+.coralbg {
+    background-color: #e74c3c;
+} 
+
+.white {
+    color: #fff!important;
+}
+
+/* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */
+div.user-menu-container {
+  width:auto;
+  z-index: 10;
+  background-color: green;
+  margin-top: 20px;
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+div.user-menu-container .btn-lg {
+    padding: 0px 12px;
+}
+
+div.user-menu-container h4 {
+    font-weight: 300;
+    color: #8b8b8b;
+}
+
+div.user-menu-container a, div.user-menu-container .btn  {
+    transition: 1s ease;
+}
+
+div.user-menu-container .thumbnail {
+   width:100%;
+   min-height:200px;
+   border: 0px!important;
+   padding: 0px;
+   border-radius: 0;
+   border: 0px!important;
+}
+
+/* -- Vertical Button Group -- */
+div.user-menu-container .btn-group-vertical {
+    display: block;
+}
+
+div.user-menu-container .btn-group-vertical>a {
+    padding: 20px 25px;
+    background-color: #46D8D2;
+    color: white;
+    border-color: #fff;
+}
+
+div.btn-group-vertical>a:hover {
+    color: white;
+    border-color: white;
+}
+
+div.btn-group-vertical>a.active {
+    background: #FA396F;
+    box-shadow: none;
+    color: white;
+}
+/* -- Individual button styles of vertical btn group -- */
+div.user-menu-btns {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+div.user-menu-btns div.btn-group-vertical>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #46D8D2;
+}
+/* -- The main tab & content styling of the vertical buttons info-- */
+div.user-menu-content {
+    color: #323232;
+}
+
+ul.user-menu-list {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+ul.user-menu-list>li {
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+div.user-menu div.user-menu-content:not(.active){
+  display: none;
+}
+
+/* -- The btn stylings for the btn icons -- */
+.btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}
+
+/* -- Custom classes for the snippet, won't effect any existing bootstrap classes of your site, but can be reused. -- */
+
+.user-pad {
+    padding: 20px 25px;
+}
+
+.no-pad {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.user-details {
+    background: #eee;
+    min-height: 333px;
+}
+
+.user-image {
+  max-height:200px;
+  overflow:hidden;
+}
+
+.overview h3 {
+    font-weight: 300;
+    margin-top: 15px;
+    margin: 10px 0 0 0;
+}
+
+.overview h4 {
+    font-weight: bold!important;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.view {
+    position:relative;
+    overflow:hidden;
+    margin-top: 10px;
+}
+
+.view p {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+ 
+.caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background: rgba(70, 216, 210, 0.44);
+    width:100%;
+    height:100%;
+    padding:2%;
+    display: none;
+    text-align:center;
+    color:#fff !important;
+    z-index:2;
+}
+
+.caption a {
+    padding-right: 10px;
+    color: #fff;
+}
+
+.info {
+    display: block;
+    padding: 10px;
+    background: #eee;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: right;
+}
+
+.info p, .stats p {
+    margin-bottom: 0;
+}
+
+.stats {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.share-links {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+
+
+/* -- media query for user profile image -- */
+@media (max-width: 767px) {
+    .user-image {
+        max-height: 400px;
+    }
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.profileRight{
+    background-color: pink;
+}
+.profileLeft{
+    background-color: red;
+}
+.user-image{
+    margin-top:3em;
+}
+
+
+/*<div class="row square col-lg-12">
+            <div class="col-md-7 col-md-offset-5 user-details">
+                <div class="row coralbg white">
+                    <div class="col-md-6 no-pad">
+                        hhhhhhhhhhhhhhhhhhhhhh
+                    </div>
+                    uuuuuuuuuuuuu
+                </div>
+                <div class="row overview">
+                    <div class="col-md-4 user-pad text-center">
+                        <h3>EVENTS</h3>
+                        <h4>2,784</h4>
+                    </div>
+                    <div class="col-md-4 user-pad text-center">
+                        <h3>ACTIVE EVENTS</h3>
+                        <h4>456</h4>
+                    </div>
+                    <div class="col-md-4 user-pad text-center">
+                        <h3>LOYALTY POINTS</h3>
+                        <h4>1,901</h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+*/
