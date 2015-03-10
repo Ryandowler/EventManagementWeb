@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--making sure $username is set and not null-->
+<!--PAGE NOT USEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD-->
 <?php
 require_once 'Event.php';
 require_once 'Connection.php';

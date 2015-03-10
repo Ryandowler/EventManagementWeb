@@ -1,7 +1,13 @@
+
 <?php
+
 require_once 'User.php';
 require_once 'Connection.php';
 require_once 'UserTableGateway.php';
+require 'Styles.php';
+require 'Scripts.php';
+require 'NavBar.php';
+
 
 $connection = Connection::getInstance();
 
@@ -23,11 +29,10 @@ $maidenName = filter_input(INPUT_POST, 'maidenName', FILTER_SANITIZE_EMAIL);
 $errorMessage = array();
 if ($username === FALSE || $username === '') {
     $errorMessage['username'] = 'username must not be blank<br/>';
-}
-else {
+} else {
     // execute a query to see if username is in the database
     $statement = $gateway->getUserByUsername($username);
-    
+
     // if the username is in the database then add an error message
     // to the errorMessage array
     if ($statement->rowCount() !== 0) {
@@ -41,8 +46,7 @@ if ($password === FALSE || $password === '') {
 
 if ($password2 === FALSE || $password2 === '') {
     $errorMessage['password2'] = 'Password2 must not be blank<br/>';
-}
-else if ($password !== $password2) {
+} else if ($password !== $password2) {
     $errorMessage['password2'] = 'Passwords must match<br/>';
 }
 if ($fullname === FALSE || $fullname === '') {
@@ -67,8 +71,7 @@ if (empty($errorMessage)) {
     $gateway->insertUser($username, $password, $fullname, $age, $emailaddress, $maidenName);
     $_SESSION['username'] = $username;
     header('Location: home.php');
-}
-else {
+} else {
     require 'register.php';
 }
 

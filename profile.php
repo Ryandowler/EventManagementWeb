@@ -1,25 +1,19 @@
 <html>
-    <head>
-
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-responsive.css" rel="stylesheet">
-        <script src="js/respond.js"></script>
-        <script src="js/event.js"></script>
-        <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">  
+    <head> 
+        <?php
+        require 'User.php';
+        require 'ensureUserLoggedIn.php';
+        require 'Styles.php';
+        require 'Scripts.php';
+        require 'NavBar.php';
+        ?>
     </head>
     <body>
-        <?php
-        require 'ensureUserLoggedIn.php';
-        //Calling in navigation bar, if i need to edit just edit NavBar.php
-        require 'NavBar.php';
-        require 'User.php';
-        ?>
         <div class="container">
             <div class=" profileLeft col-lg-6">
                 <div class="user-image col-lg-4">
-                        <img src="img/profilePic.png" class="img-responsive thumbnail">
-                    </div>
+                    <img src="img/profilePic.png" class="img-responsive thumbnail">
+                </div>
                 <div class="user-pad">
                     <h3>Welcome back,  <?php
                         $username = $_SESSION['username'];
@@ -34,13 +28,13 @@
                     <button type="button" class="btn btn-labeled btn-info" href="#">
                         <span class="btn-label"><i class="fa fa-pencil"></i></span>Update</button>
                 </div>
-                
-                    
-                
+
+
+
             </div>
             <div class="profileRight col-lg-6">
                 <h3 class="col-lg-offset-4">Active Events</h3>
-                
+
 
             </div>
         </div>

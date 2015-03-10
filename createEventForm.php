@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <meta charset="UTF-8">
-        <title></title>
-        <!-- linking in javascript form validation-->
-        <script type="text/javascript" src="js/event.js"></script>
-        <!--importing jquery for navbar-->
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="js/script.js"></script>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-responsive.css" rel="stylesheet">
-        <script src="js/respond.js"></script>
-        <!-- linking in CSS for styling-->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <?php
+        require 'Styles.php';
+        require 'Scripts.php';
+        require 'NavBar.php';
+        require 'ensureUserLoggedIn.php';
+        ?>
+        <title>Create Event</title>
     </head>
     <body id="createEventFormBG">
 
@@ -24,7 +17,7 @@
         }
 
         //Calling in navigation bar, if i need to edit just edit NavBar.php
-        require 'NavBar.php'
+        //require 'NavBar.php'
         ?>
 
 
@@ -167,7 +160,7 @@
 // }
                                     ?>
                                 </span>
-                                
+
 
                             </td>
                         </tr>
@@ -212,7 +205,7 @@
                     </tbody>
                 </table>
                 <!--second Table to print out errors------------------------------------------------------------------------>
-                
+
             </form>
 
 
@@ -248,6 +241,6 @@
 
         </div>
     </form>
-    
+
 </body>
 </html>

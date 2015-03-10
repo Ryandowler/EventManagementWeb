@@ -1,7 +1,9 @@
 <?php
+
 require_once 'Event.php';
 require_once 'Connection.php';
 require_once 'EventTableGateway.php';
+
 
 $id = session_id();
 if ($id == "") {

@@ -3,6 +3,9 @@ require_once 'Event.php';
 require_once 'Connection.php';
 require_once 'EventTableGateway.php';
 require 'ensureUserLoggedIn.php';
+require 'Styles.php';
+require 'Scripts.php';
+require 'NavBar.php';
 $id = session_id();
 if ($id == "") {
     session_start();
@@ -22,25 +25,11 @@ if ($statement->rowCount() !== 1) {
 }
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-//Calling in navigation bar, if i need to edit just edit NavBar.php
- require 'NavBar.php'
-
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <meta charset="UTF-8">
-        <title></title>
-        <!-- linking in javascript form validation-->
-        <script type="text/javascript" src="js/event.js"></script> <!-- TJOSJSGKG -->
-        <!--importing jquery for navbar-->
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="js/script.js"></script>
-        <!-- linking in CSS for styling-->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <!-- <script type="text/javascript" src="js/editEvent.js"></script> -->
+        
     </head>
     <body>
         <h1>Edit Event Form</h1>

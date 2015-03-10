@@ -1,21 +1,16 @@
 <html>
-    <head>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-
-        <!--importing jquery for navbar-->
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="js/script.js"></script>
-        <script src="js/deleteEvent.js"></script>
-        <script type="text/javascript" src="js/event.js"></script>
+    <head><!--requiring The nessesary elements for this page-->
+        <?php
+        require 'Styles.php';
+        require 'Scripts.php';
+        require 'ensureUserLoggedIn.php';
+        require 'NavBar.php';
+        require_once 'Event.php';
+        require_once 'Connection.php';
+        require_once 'EventTableGateway.php';
+        ?>
     </head>
     <body>
-        <?php
-        require 'ensureUserLoggedIn.php';
-        //Calling in navigation bar, if i need to edit just edit NavBar.php
-        require 'NavBar.php'
-        ?>
         <?php
         if (isset($message)) {
             echo '<p>' . $message . '</p>';
@@ -23,16 +18,6 @@
         ?>
         <div>
             <?php
-            //requiring Event.php as some of its elements are needed in this page
-            require_once 'Event.php';
-            require_once 'Connection.php';
-            require_once 'EventTableGateway.php';
-            /* 'ensureUserLoggedIn.php';
-              moved this up before require 'toolbar.php' as if the user was not signed in and visited
-             * this page they still could view the page. the check should be done before requireing this
-             */
-            //require 'viewEvent.php';
-
             $connection = Connection::getInstance();
             $gateway = new EventTableGateway($connection);
 

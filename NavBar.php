@@ -7,8 +7,7 @@
     //require 'toolbar.php' 
     ?>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    
     <script src="js/respond.js"></script>
     <div class = "navbar navbar-inverse navbar-static-top myNav">
         <div class = "container">

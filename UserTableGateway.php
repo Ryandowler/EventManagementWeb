@@ -41,7 +41,7 @@ class UserTableGateway {
             "fullname" => $fullname,
             "age" => $age,
             "emailaddress" => $emailaddress,
-            "maidenName" => maidenName 
+            "maidenName" => $maidenName 
         );
 
         $status = $statement->execute($params);

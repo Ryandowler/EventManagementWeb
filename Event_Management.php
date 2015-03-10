@@ -1,22 +1,20 @@
 <!doctype html>
+<?php
+require 'Styles.php';
+require 'Scripts.php';
+require 'ensureUserLoggedIn.php';
+?>
 <html>
     <head>
         <meta charset="utf-8">
         <title>My Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-responsive.css" rel="stylesheet">
-        <script src="js/respond.js"></script>
-        <link href="css/styles/ihover.css" rel="stylesheet">
-        <link href="css/styles/ihover.min.css" rel="stylesheet">
+
+
+
     </head>
     <body>
-        <?php
-        require 'ensureUserLoggedIn.php';
-        //I didnt use this as i went with the better option of drop down sign out like a real site
-        //require 'toolbar.php' 
-        ?>
         <?php
         if (isset($message)) {
             echo '<p>' . $message . '</p>';
@@ -168,9 +166,9 @@
                             <!-- LEARN MORE about the STAFF BUTTON-->	
                             <div class="text-center">						
                                 <a href="#" class=" btn btn-lg btn-info col-lg-6 col-lg-push-2 col-md-7 col-md-push-2 ">Learn More</a> 
-                                
+
                             </div>
-                            
+
                         </div>
                         <!--
                         <div class="socialMedia list-inline">	
@@ -244,17 +242,18 @@
                                 beter blabaday blah de bla This website is amaxing the service they provide is even beter blabaday blah de
                                 </text>
                                 <a href="#" class="visible-xs continueReading btn btn-sm contiueReadingBTN col-xs-4 col-xs-push-9 " >Continue Reading</a>
+                                <div class="customerCysleBTN">
+                                    <!-- Button LEFT-->							
+                                    <a href="#" class=" btn previousButton btn-info col-lg-1 col-md-2  ">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a> 
+                                    <!-- Button RIGHT-->	
+                                    <a href="#" class=" btn btn-info col-lg-1 col-md-2 col-lg-push-1 col-md-push-1 ">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a> 
+                                </div>
                             </div>
-                            <div class="customerCysleBTN">
-                                <!-- Button LEFT-->							
-                                <a href="#" class=" btn previousButton btn-info col-lg-1 col-md-2  ">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a> 
-                                <!-- Button RIGHT-->	
-                                <a href="#" class=" btn btn-info col-lg-1 col-md-2 col-lg-push-1 col-md-push-1 ">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a> 
-                            </div>
+
                             </p>
                             <!--
                             <p class="comment visible-xs">
@@ -325,25 +324,25 @@
                     </div>
                 </div>
                 <!-- /THIRD column-->
-<a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
+                <a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
 
-<div class="modal" id="myModal">
-	<div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          Content for the dialog / modal goes here.
-        </div>
-        <div class="modal-footer">
-          <a href="#" data-dismiss="modal" class="btn">Close</a>
-          <a href="#" class="btn btn-primary">Save changes</a>
-        </div>
-      </div>
-    </div>
-</div>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                Content for the dialog / modal goes here.
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-dismiss="modal" class="btn">Close</a>
+                                <a href="#" class="btn btn-primary">Save changes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </footer>
 
 

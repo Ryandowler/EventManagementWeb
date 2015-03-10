@@ -44,28 +44,28 @@ $statement = $gateway->getEvents();
     </head>
     <body>
         <div class = "navbar navbar-inverse navbar-static-top myNav">
-        <div class = "container">
-            <a href = "Event_Management.php" class = "navbar-brand">
-                <span class="glyphicon glyphicon-home"></span> Eventer</a>
-            <link rel="stylesheet" type="text/css" href="css/style.css">
-            <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
-                <!-- 3 LINES TO MAKE BURGER MENU-->
-                <span class = "icon-bar"></span>
-                <span class = "icon-bar"></span>
-                <span class = "icon-bar"></span>
-            </button>
-            <!-- LINKS-->
-            <div class = "collapse navbar-collapse navHeaderCollapse">
-                <ul class = "nav navbar-nav navbar-right">
-                    <li><a href = "#">Home</a></li>
-                    <li><a href = "#">MyEvents</a></li>
-                    <li><a href = "#">Contact</a></li>
-                    <li><a href = "#">Profile</a></li>
-                    
-                </ul>
+            <div class = "container">
+                <a href = "Event_Management.php" class = "navbar-brand">
+                    <span class="glyphicon glyphicon-home"></span> Eventer</a>
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+                <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                    <!-- 3 LINES TO MAKE BURGER MENU-->
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+                <!-- LINKS-->
+                <div class = "collapse navbar-collapse navHeaderCollapse">
+                    <ul class = "nav navbar-nav navbar-right">
+                        <li><a href = "#">Home</a></li>
+                        <li><a href = "#">MyEvents</a></li>
+                        <li><a href = "#">Contact</a></li>
+                        <li><a href = "#">Profile</a></li>
+
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
         <?php
         if (isset($message)) {
             echo '<p>' . $message . '</p>';
@@ -127,110 +127,114 @@ $statement = $gateway->getEvents();
                                                         </span>
                                                     </td>
                                                 </tr>
-                                                
-                                                    <!-- HIDING THIS ADD IN PLACEHOLDER  <td></td> -->
-                                                    <td> 
-                                                        
-                                                        <input  type="submit" class="btn btn-lg col-lg-12"  value="Login" name="login" />
-                                                        <input  type="button" class="btn btn-sm col-lg-6" value="Forgot Password" name="forgot" onclick="myFunction()" />
-                                                        
-                                                    </td >
-                                                
+
+    <!-- HIDING THIS ADD IN PLACEHOLDER  <td></td> -->
+                                            <td> 
+
+                                                <input  type="submit" class="btn btn-lg col-lg-12"  value="Login" name="login" />
+                                                <input  type="button" class="btn btn-sm col-lg-6" value="Forgot Password" name="forgot" onclick="myFunction()" />
+
+                                            </td >
+
                                             </tbody>
                                         </table>
                                     </form>   
                                     <!--/END Sign in tab -->
                                 </div>
+                                <!------------ REGISTER SECTION---------------------->
                                 <div class="tab-pane fade" id="create">
-                                   <form id="registerForm" action="checkRegister.php" method="POST" onsubmit="return validateRegistration(this);">
-                        <table id="registerTable">
-                            <tbody>
-                                <tr><!-- table data-->
-                                   <!-- <td>Username</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="text" name="username" class="form-control" placeholder="Username" value="" />     
-                                        <span id="usernameError" class="error">
-                                            <!--using internal PHP code to check everything its told to do in the other page
-                                            (no blanks etc), and the id to link up to the correct one -->
+                                    <form  action="checkRegister.php" method="POST" onsubmit="return validateRegistration(this);">
+                                        
+                                        <table id="registerTable">
+                                            <tbody>
+                                                <tr><!-- table data-->
+                                                   <!-- <td>Username</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="text" name="username" class="form-control" placeholder="Username" value="" />     
+                                                        <span id="usernameError" class="error">
+                                                            <!--using internal PHP code to check everything its told to do in the other page
+                                                            (no blanks etc), and the id to link up to the correct one -->
 
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <!-- <td>Password</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="password" class="form-control" placeholder="Password" name="password" value="" />   
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                   <!-- <td>Password</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="password" class="form-control" placeholder="Password" name="password" value="" />   
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <!--<td>Confirm Password</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="password" class="form-control" placeholder="Verify Password" name="password2" value="" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                   <!--<td>Confirm Password</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="password" class="form-control" placeholder="Verify Password" name="password2" value="" />
 
-                                    </td>
-                                </tr>
-                                <tr><!-- table data-->
-                                    <!--<td>Full Name</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="text" class="form-control" placeholder="Name" name="fullname" value="<?php
-                                        if (isset($_POST) && isset($_POST['fullname'])) {
-                                            echo $_POST['fullname'];
-                                        }
-                                        ?>" />     
+                                                    </td>
+                                                </tr>
+                                                <tr><!-- table data-->
+                                                    <!--<td>Full Name</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="text" class="form-control" placeholder="Name" name="fullname" value="<?php
+                                                        if (isset($_POST) && isset($_POST['fullname'])) {
+                                                            echo $_POST['fullname'];
+                                                        }
+                                                        ?>" />     
 
-                                    </td>
-                                </tr>
-                                <tr><!-- table data-->
-                                  <!--  <td>Age</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="text" class="form-control" name="age" placeholder="Age" value="<?php
-                                        if (isset($_POST) && isset($_POST['age'])) {
-                                            echo $_POST['age'];
-                                        }
-                                        ?>" />     
+                                                    </td>
+                                                </tr>
+                                                <tr><!-- table data-->
+                                                  <!--  <td>Age</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="text" class="form-control" name="age" placeholder="Age" value="<?php
+                                                        if (isset($_POST) && isset($_POST['age'])) {
+                                                            echo $_POST['age'];
+                                                        }
+                                                        ?>" />     
 
-                                    </td>
-                                </tr>
-                                <tr><!-- table data-->
-                                   <!-- <td>Email-Address</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="text" class="form-control" name="emailaddress" placeholder="Email-address" value="<?php
-                                        if (isset($_POST) && isset($_POST['emailaddress'])) {
-                                            echo $_POST['emailaddress'];
-                                        }
-                                        ?>" />     
+                                                    </td>
+                                                </tr>
+                                                <tr><!-- table data-->
+                                                   <!-- <td>Email-Address</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="text" class="form-control" name="emailaddress" placeholder="Email-address" value="<?php
+                                                        if (isset($_POST) && isset($_POST['emailaddress'])) {
+                                                            echo $_POST['emailaddress'];
+                                                        }
+                                                        ?>" />     
 
-                                    </td>
-                                </tr>
-                                <tr><!-- table data-->
-                                   <!-- <td>Mothers maiden name</td>-->
-                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
-                                        <input type="text" class="form-control" name="maidenName" placeholder="Mothers mainden name" value="<?php
-                                        if (isset($_POST) && isset($_POST['maidenName'])) {
-                                            echo $_POST['maidenName'];
-                                        }
-                                        ?>" />     
+                                                    </td>
+                                                </tr>
+                                                <tr><!-- table data-->
+                                                   <!-- <td>Mothers maiden name</td>-->
+                                                    <td><!-- showing what data type will be entered and the id assigned with this table data and its blank default entry-->
+                                                        <input type="text" class="form-control" name="maidenName" placeholder="Mothers mainden name" value="<?php
+                                                        if (isset($_POST) && isset($_POST['maidenName'])) {
+                                                            echo $_POST['maidenName'];
+                                                        }
+                                                        ?>" />     
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                   
-                                    <td> <!-- making a button of type submit -->
-                                        <input type="submit" value="Register" class="btn btn-sm col-lg-12" name="register" />
-                                        <!-- WHY DO I NEED THIS <input type="button" value="Cancel" name="cancel" onclick ="document.location.href = 'index.php'" /> -->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </form>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td> <!-- making a button of type submit -->
+                                                        <input type="submit" value="Register" class="btn btn-sm col-lg-12" name="register" />
+                                                        <!-- WHY DO I NEED THIS <input type="button" value="Cancel" name="cancel" onclick ="document.location.href = 'index.php'" /> -->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+               
+                
             </div>
-            
+
             <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
             <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>    
 
